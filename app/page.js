@@ -1,101 +1,104 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <div className="bg-gradient-to-br from-gray-900 via-black to-purple-900 min-h-screen">
+      {/* Hero Section */}
+      <div className="flex justify-center flex-col gap-4 items-center text-white h-[60vh] px-5 md:px-0 text-xs md:text-base">
+        <div className="font-bold flex gap-2 md:text-5xl justify-center items-center text-xl">
+          Buy Me a Chai{" "}
+          <span>
+            <img
+              className="bg-slate-400 rounded-full p-2 mx-4"
+              src="/teabag2.gif"
+              width={88}
+              alt="Teabag"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </span>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <p className="text-center md:text-left">
+          A crowdfunding platform for creators. Get funded by your fans and followers. Start now!
+        </p>
+        <div className="flex space-x-4">
+          <Link href={"/login"}>
+            <button
+              type="button"
+              className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5"
+            >
+              Start here
+            </button>
+          </Link>
+          <Link href={"/about"}>
+            <button
+              type="button"
+              className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5"
+            >
+              Read More
+            </button>
+          </Link>
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div className="bg-gradient-to-r from-purple-700 to-gray-800 h-1 opacity-50"></div>
+
+      {/* Features Section */}
+      <div className="text-white container mx-auto py-20">
+        <h1 className="text-3xl font-bold text-center mb-14">Your Fans can Buy You a Chai</h1>
+        <div className="flex flex-wrap gap-8 justify-around">
+          <div className="item space-y-3 flex flex-col items-center">
+            <img
+              className="bg-slate-400 rounded-full p-2"
+              width={88}
+              src="/man.gif"
+              alt="Supportive Fans"
+            />
+            <p className="font-bold text-lg">Supportive Fans</p>
+            <p className="text-center">Your fans are here to help you succeed!</p>
+          </div>
+          <div className="item space-y-3 flex flex-col items-center">
+            <img
+              className="bg-slate-400 rounded-full p-2"
+              width={88}
+              src="/coin.gif"
+              alt="Financial Support"
+            />
+            <p className="font-bold text-lg">Financial Support</p>
+            <p className="text-center">Receive contributions from your followers.</p>
+          </div>
+          <div className="item space-y-3 flex flex-col items-center">
+            <img
+              className="bg-slate-400 rounded-full p-2"
+              width={88}
+              src="/help.gif"
+              alt="Continuous Growth"
+            />
+            <p className="font-bold text-lg">Continuous Growth</p>
+            <p className="text-center">Grow with the support of your community.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div className="bg-gradient-to-r from-purple-700 to-gray-800 h-1 opacity-50"></div>
+
+      {/* Video Section */}
+      <div className="text-white container mx-auto py-20 flex flex-col items-center">
+        <h2 className="text-3xl font-bold text-center mb-14">Learn More About Us</h2>
+        <div className="w-full max-w-3xl">
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/axepn8QqxRk?si=bIvjN0apBBsczfvi"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="rounded-lg shadow-lg"
+          ></iframe>
+        </div>
+      </div>
     </div>
   );
 }
